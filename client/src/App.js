@@ -3,8 +3,9 @@ import { createTheme } from "@mui/material/styles";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { themeSettings } from "theme";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "components/Layout/Layout";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Layout from "pages/Layout/Layout";
+import Dashboard from "pages/dashboard/Dashboard";
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
@@ -12,14 +13,15 @@ function App() {
   return (
     <div className="app">
       <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Routes>
-          <Route>
-
-          </Route>
-        </Routes>
-      </ThemeProvider>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<Navigate to="/dashboard" replace />} />
+              <Route path="/dashboard" element={<Dashboard/>}/>
+            </Route>
+          </Routes>
+        </ThemeProvider>
       </BrowserRouter>
     </div>
   );
