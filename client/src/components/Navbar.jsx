@@ -14,7 +14,7 @@ import profileImage from "assets/35af6a41332353.57a1ce913e889.jpg";
 import { useTheme } from "@emotion/react";
 import { AppBar, Icon, IconButton, InputBase, Toolbar } from "@mui/material";
 
-const Navbar = () => {
+const Navbar = ({ isSidebarOpen, setIsSidebarOpen }) => {
   const dispatch = useDispatch();
   const theme = useTheme();
 
@@ -28,7 +28,7 @@ const Navbar = () => {
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
         <FlexBetween>
-          <IconButton onClick={() => console.log("open.clise sidebar")}>
+          <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
             <MenuIcon />
           </IconButton>
           <FlexBetween
@@ -52,7 +52,7 @@ const Navbar = () => {
             )}
           </IconButton>
           <IconButton>
-            <SettingsOutlined sx={{ fontSize: "25px" }}/>
+            <SettingsOutlined sx={{ fontSize: "25px" }} />
           </IconButton>
         </FlexBetween>
       </Toolbar>
