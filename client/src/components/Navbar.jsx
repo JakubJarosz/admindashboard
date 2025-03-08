@@ -12,7 +12,7 @@ import { useDispatch } from "react-redux";
 import { setMode } from "state";
 import profileImage from "assets/35af6a41332353.57a1ce913e889.jpg";
 import { useTheme } from "@emotion/react";
-import { AppBar, IconButton, InputBase, Toolbar } from "@mui/material";
+import { AppBar, Icon, IconButton, InputBase, Toolbar } from "@mui/material";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -42,6 +42,18 @@ const Navbar = () => {
               <Search />
             </IconButton>
           </FlexBetween>
+        </FlexBetween>
+        <FlexBetween gap="1.5rem">
+          <IconButton onClick={() => dispatch(setMode())}>
+            {theme.palette.mode === "dark" ? (
+              <DarkModeOutlined sx={{ fontSize: "25px" }} />
+            ) : (
+              <LightModeOutlined sx={{ fontSize: "25px" }} />
+            )}
+          </IconButton>
+          <IconButton>
+            <SettingsOutlined sx={{ fontSize: "25px" }}/>
+          </IconButton>
         </FlexBetween>
       </Toolbar>
     </AppBar>
