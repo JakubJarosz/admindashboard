@@ -15,7 +15,8 @@ import salesRoutes from "./routes/sales.js"
 import User from "./models/User.js";
 import Product from "./models/Product.js";
 import ProductStat from "./models/ProductStat.js";
-import {dataUser, dataProduct, dataProductStat} from "./data/index.js"
+import Transtaction from "./models/Transaction.js";
+import {dataUser, dataProduct, dataProductStat, dataTransaction} from "./data/index.js"
 
 // CONFIGURATION
 
@@ -43,6 +44,7 @@ mongoose.connect(process.env.MONGO_URL)
         app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
         // Product.insertMany(dataProduct)
         // ProductStat.insertMany(dataProductStat);
+        // Transtaction.insertMany(dataTransaction)
         
     })
     .catch((error) => console.error(`Failed to connect to MongoDB: ${error}`));
