@@ -3,7 +3,7 @@ import { DataGrid } from '@mui/x-data-grid'
 import { useGetTransactionsQuery } from 'state/api'
 import Header from 'components/Header'
 import { useTheme } from '@emotion/react'
-import { Box, Toolbar } from "@mui/material";
+import { Box } from "@mui/material";
 import DataGridCustomToolbar from 'components/DataGridCustomToolbar'
 
 const Transactions = () => {
