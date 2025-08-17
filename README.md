@@ -7,7 +7,9 @@ Built with **React, Express, MongoDB, and Material UI**.
 
 ## 📸 Screenshot
 
-![Dashboard](./screenshots/dashboard.PNG)
+![Products](./screenshots/mainpage.PNG)
+![Customers](./screenshots/customers.PNG)
+![Transactions](./screenshots/transactions.PNG)
 
 ---
 
