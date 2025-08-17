@@ -38,6 +38,8 @@ bash
 cd ../frontend
 npm install
 npm start
+```
+
 ⚙️ Tech Stack
 * React
 
@@ -46,3 +48,9 @@ npm start
 * MongoDB (Mongoose)
 
 * Material UI
+
+## 👤 Author
+
+**JakubJarosz**  
+GitHub: [@JakubJarosz](https://github.com/JakubJarosz)  
+Email: jakubtm165@gmail.com 
